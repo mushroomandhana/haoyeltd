@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-  }
-  
+}
+
 
 body {
     width: 100%;
@@ -177,6 +177,7 @@ body {
         top: 1rem;
     }
 }
+
 @media (max-width: 575px) {
     .logo {
         left: 1.5rem;
@@ -232,7 +233,8 @@ body {
     color: #000;
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
     /* color: #3589A1; */
     color: #000;
 }
@@ -257,17 +259,34 @@ body {
 
 .description {
     opacity: 0;
-    transition: opacity 2s ease-in-out; /* 調整過渡時間和緩動效果 */
-    }
-    
-    .fade-in {
+    transition: opacity 1.5s ease-in-out;
+    /* 調整過渡時間和緩動效果 */
+}
+
+.fade-in {
     opacity: 1;
-    }
-    
-    .fade-out {
+}
+
+.fade-out {
     opacity: 0;
+}
+
+/* 隱藏手機版文字區塊 */
+.description.mobile {
+    display: none;
+}
+
+/* 隱藏桌機版文字區塊 */
+@media (max-width: 991px) {
+    .description.desktop {
+        display: none;
     }
 
+    .description.mobile {
+        display: block;
+        margin-bottom: 80px;
+    }
+}
 
 
 @media (max-width: 991px) {
@@ -310,6 +329,16 @@ body {
     position: relative;
     overflow: hidden;
     padding-top: 194px; */
+}
+
+@media (max-width: 991px) {
+    .section1 .title {
+        margin-bottom: 40px;
+    }
+
+    .section1 .section_inner {
+        align-items: start;
+    }
 }
 
 

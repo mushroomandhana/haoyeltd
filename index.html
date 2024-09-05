@@ -67,42 +67,55 @@
     <div class="container-fluid" id="content_container">
         <section id="about" class="container-fluid content-section section1">
             <div class="section_inner container d-flex flex-column flex-lg-row justify-content-between">
-                <div class="about_text col-lg-6 col-md-12 align-self-left">
-                    <div class="title clearfix">
-                        <h2>About Hao Ye</h2>
-                        <div class="subtitle">
-                            <img src="./images/img_icon_subtitle_tip.svg">
-                            <h3>關於灝冶</h3>
-                        </div>
-                    </div>
-                    <!-- <div class="spacer"></div> -->
-                    <div class="description" id="description">
-                        <p>創立於2019年</p>
-                        <p>「品質、專業、服務」為三大核心價值</p>
-                        <p>嚴格把關工程品質，從材料到施工</p>
-                        <p>確實掌握每個環節，打造近乎完美的作品</p>
-                        <br><br>
-                        <p>致力於提供更快速、經濟、安全的施工方案</p>
-                        <p>解決客戶的難題，成就兼顧安全與品質的工程</p>
-                        <br><br>
-                        <p>我們的目標始終如一</p>
-                        <p>以品質為指標，以專業為基礎，提供整全的工程服務</p>
-                        <p>成為客戶的最佳夥伴</p>
-                    </div>
-                </div>
-                <div class="slideshow-container col-lg-6 col-md-12">
-                    <div class="kv_fade kv_show">
-                        <img src="./images/img1.png" class="img-fluid" alt="Image 1">
-                    </div>
-                    <div class="kv_fade">
-                        <img src="./images/img2.png" class="img-fluid" alt="Image 2">
-                    </div>
-                    <div class="kv_fade">
-                        <img src="./images/img3.png" class="img-fluid" alt="Image 3">
-                    </div>
-                </div>
+            <div class="about_text col-lg-6 col-md-12 align-self-left">
+            <div class="title clearfix">
+            <h2>About Hao Ye</h2>
+            <div class="subtitle">
+            <img src="./images/img_icon_subtitle_tip.svg">
+            <h3>關於灝冶</h3>
             </div>
-        </section>
+            </div>
+            <div class="description desktop" id="description-desktop">
+            <p>創立於2019年</p>
+            <p>「品質、專業、服務」為三大核心價值</p>
+            <p>嚴格把關工程品質，從材料到施工</p>
+            <p>確實掌握每個環節，打造近乎完美的作品</p>
+            <br><br>
+            <p>致力於提供更快速、經濟、安全的施工方案</p>
+            <p>解決客戶的難題，成就兼顧安全與品質的工程</p>
+            <br><br>
+            <p>我們的目標始終如一</p>
+            <p>以品質為指標，以專業為基礎，提供整全的工程服務</p>
+            <p>成為客戶的最佳夥伴</p>
+            </div>
+            </div>
+            <div class="slideshow-container col-lg-6 col-md-12">
+            <div class="kv_fade kv_show">
+            <img src="./images/img1.png" class="img-fluid" alt="Image 1">
+            </div>
+            <div class="kv_fade">
+            <img src="./images/img2.png" class="img-fluid" alt="Image 2">
+            </div>
+            <div class="kv_fade">
+            <img src="./images/img3.png" class="img-fluid" alt="Image 3">
+            </div>
+            </div>
+            <div class="description mobile" id="description-mobile">
+            <p>創立於2019年</p>
+            <p>「品質、專業、服務」為三大核心價值</p>
+            <p>嚴格把關工程品質，從材料到施工</p>
+            <p>確實掌握每個環節，打造近乎完美的作品</p>
+            <br><br>
+            <p>致力於提供更快速、經濟、安全的施工方案</p>
+            <p>解決客戶的難題，成就兼顧安全與品質的工程</p>
+            <br><br>
+            <p>我們的目標始終如一</p>
+            <p>以品質為指標，以專業為基礎，提供整全的工程服務</p>
+            <p>成為客戶的最佳夥伴</p>
+            </div>
+            </div>
+            </section>
+            
 
         <section id="services" class="container-fluid content-section section2">
             <div class="section_inner container">
@@ -1396,19 +1409,34 @@
 
         // section1 description animation
         document.addEventListener('DOMContentLoaded', function () {
-            const description = document.getElementById('description');
-            description.classList.add('fade-in');
+            const descriptionDesktop = document.getElementById('description-desktop');
+            const descriptionMobile = document.getElementById('description-mobile');
 
-            window.addEventListener('scroll', function () {
-                const rect = description.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    description.classList.add('fade-in');
-                    description.classList.remove('fade-out');
+            function handleScroll() {
+                const rectDesktop = descriptionDesktop.getBoundingClientRect();
+                const rectMobile = descriptionMobile.getBoundingClientRect();
+
+                if (rectDesktop.top < window.innerHeight && rectDesktop.bottom >= 0) {
+                    descriptionDesktop.classList.add('fade-in');
+                    descriptionDesktop.classList.remove('fade-out');
                 } else {
-                    description.classList.add('fade-out');
-                    description.classList.remove('fade-in');
+                    descriptionDesktop.classList.add('fade-out');
+                    descriptionDesktop.classList.remove('fade-in');
                 }
-            });
+
+                if (rectMobile.top < window.innerHeight && rectMobile.bottom >= 0) {
+                    descriptionMobile.classList.add('fade-in');
+                    descriptionMobile.classList.remove('fade-out');
+                } else {
+                    descriptionMobile.classList.add('fade-out');
+                    descriptionMobile.classList.remove('fade-in');
+                }
+            }
+
+            descriptionDesktop.classList.add('fade-in');
+            descriptionMobile.classList.add('fade-in');
+
+            window.addEventListener('scroll', handleScroll);
         });
 
         // fadein fade out img animation
