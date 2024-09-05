@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <!-- <div class="spacer"></div> -->
-                    <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <div class="description" id="description">
                         <p>創立於2019年</p>
                         <p>「品質、專業、服務」為三大核心價值</p>
                         <p>嚴格把關工程品質，從材料到施工</p>
@@ -1392,6 +1392,24 @@
         window.onload = function () {
             setTimeout(fadeInOut, 760); // Start after 3 seconds
         };
+
+
+        // section1 description animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const description = document.getElementById('description');
+            description.classList.add('fade-in');
+
+            window.addEventListener('scroll', function () {
+                const rect = description.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    description.classList.add('fade-in');
+                    description.classList.remove('fade-out');
+                } else {
+                    description.classList.add('fade-out');
+                    description.classList.remove('fade-in');
+                }
+            });
+        });
 
         // fadein fade out img animation
         let currentIndex = 0;

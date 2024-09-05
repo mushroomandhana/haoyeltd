@@ -255,6 +255,21 @@ body {
     align-items: end;
 }
 
+.description {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* 調整過渡時間和緩動效果 */
+    }
+    
+    .fade-in {
+    opacity: 1;
+    }
+    
+    .fade-out {
+    opacity: 0;
+    }
+
+
+
 @media (max-width: 991px) {
     .section1 {
         height: auto;
