@@ -67,55 +67,55 @@
     <div class="container-fluid" id="content_container">
         <section id="about" class="container-fluid content-section section1">
             <div class="section_inner container d-flex flex-column flex-lg-row justify-content-between">
-            <div class="about_text col-lg-6 col-md-12 align-self-left">
-            <div class="title clearfix">
-            <h2>About Hao Ye</h2>
-            <div class="subtitle">
-            <img src="./images/img_icon_subtitle_tip.svg">
-            <h3>關於灝冶</h3>
+                <div class="about_text col-lg-6 col-md-12 align-self-left">
+                    <div class="title clearfix">
+                        <h2>About Hao Ye</h2>
+                        <div class="subtitle">
+                            <img src="./images/img_icon_subtitle_tip.svg">
+                            <h3>關於灝冶</h3>
+                        </div>
+                    </div>
+                    <div class="description desktop" id="description-desktop">
+                        <p>創立於2019年</p>
+                        <p>「品質、專業、服務」為三大核心價值</p>
+                        <p>嚴格把關工程品質，從材料到施工</p>
+                        <p>確實掌握每個環節，打造近乎完美的作品</p>
+                        <br><br>
+                        <p>致力於提供更快速、經濟、安全的施工方案</p>
+                        <p>解決客戶的難題，成就兼顧安全與品質的工程</p>
+                        <br><br>
+                        <p>我們的目標始終如一</p>
+                        <p>以品質為指標，以專業為基礎，提供整全的工程服務</p>
+                        <p>成為客戶的最佳夥伴</p>
+                    </div>
+                </div>
+                <div class="slideshow-container col-lg-6 col-md-12">
+                    <div class="kv_fade kv_show">
+                        <img src="./images/img1.png" class="img-fluid" alt="Image 1">
+                    </div>
+                    <div class="kv_fade">
+                        <img src="./images/img2.png" class="img-fluid" alt="Image 2">
+                    </div>
+                    <div class="kv_fade">
+                        <img src="./images/img3.png" class="img-fluid" alt="Image 3">
+                    </div>
+                </div>
+                <div class="description mobile" id="description-mobile">
+                    <p>創立於2019年</p>
+                    <p>「品質、專業、服務」為三大核心價值</p>
+                    <p>嚴格把關工程品質，從材料到施工</p>
+                    <p>確實掌握每個環節，打造近乎完美的作品</p>
+                    <br><br>
+                    <p>致力於提供更快速、經濟、安全的施工方案</p>
+                    <p>解決客戶的難題，成就兼顧安全與品質的工程</p>
+                    <br><br>
+                    <p>我們的目標始終如一</p>
+                    <p>以品質為指標，以專業為基礎，提供整全的工程服務</p>
+                    <p>成為客戶的最佳夥伴</p>
+                </div>
             </div>
-            </div>
-            <div class="description desktop" id="description-desktop">
-            <p>創立於2019年</p>
-            <p>「品質、專業、服務」為三大核心價值</p>
-            <p>嚴格把關工程品質，從材料到施工</p>
-            <p>確實掌握每個環節，打造近乎完美的作品</p>
-            <br><br>
-            <p>致力於提供更快速、經濟、安全的施工方案</p>
-            <p>解決客戶的難題，成就兼顧安全與品質的工程</p>
-            <br><br>
-            <p>我們的目標始終如一</p>
-            <p>以品質為指標，以專業為基礎，提供整全的工程服務</p>
-            <p>成為客戶的最佳夥伴</p>
-            </div>
-            </div>
-            <div class="slideshow-container col-lg-6 col-md-12">
-            <div class="kv_fade kv_show">
-            <img src="./images/img1.png" class="img-fluid" alt="Image 1">
-            </div>
-            <div class="kv_fade">
-            <img src="./images/img2.png" class="img-fluid" alt="Image 2">
-            </div>
-            <div class="kv_fade">
-            <img src="./images/img3.png" class="img-fluid" alt="Image 3">
-            </div>
-            </div>
-            <div class="description mobile" id="description-mobile">
-            <p>創立於2019年</p>
-            <p>「品質、專業、服務」為三大核心價值</p>
-            <p>嚴格把關工程品質，從材料到施工</p>
-            <p>確實掌握每個環節，打造近乎完美的作品</p>
-            <br><br>
-            <p>致力於提供更快速、經濟、安全的施工方案</p>
-            <p>解決客戶的難題，成就兼顧安全與品質的工程</p>
-            <br><br>
-            <p>我們的目標始終如一</p>
-            <p>以品質為指標，以專業為基礎，提供整全的工程服務</p>
-            <p>成為客戶的最佳夥伴</p>
-            </div>
-            </div>
-            </section>
-            
+        </section>
+
 
         <section id="services" class="container-fluid content-section section2">
             <div class="section_inner container">
@@ -1508,7 +1508,8 @@
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: [0.1, 0.5, 0.9] // 調整為多個閾值
+                threshold: [0.2, 0.5, 0.7] // 調整為單個閾值
+                // threshold: [0.2, 0.5, 0.75, 0.2]
             };
 
             const observerCallback = (entries, observer) => {
@@ -1533,7 +1534,7 @@
                     const targetId = this.getAttribute('href').substring(1);
                     const targetSection = document.getElementById(targetId);
                     window.scrollTo({
-                        top: targetSection.offsetTop - 75, // 調整偏移量為 100 像素
+                        top: targetSection.offsetTop - 100, // 調整偏移量為 100 像素
                         behavior: 'smooth'
                     });
                     navbarCollapse.classList.remove('show');
@@ -1580,6 +1581,7 @@
             navLinks.forEach(navLink => navLink.classList.remove('active'));
         });
 
+
         // Get the buttons
         let mybutton = document.getElementById("myBtn");
         let downloadButton = document.querySelector(".download_menu");
@@ -1617,8 +1619,8 @@
     <script>
         AOS.init({
             once: false, // 設置為false，確保動畫在滾動到元素時每次都觸發
-            duration: 800, // 動畫持續時間
-            offset: 50, // 增加偏移量，讓動畫更早觸發
+            duration: 1000, // 動畫持續時間
+            // offset: 50,  增加偏移量，讓動畫更早觸發
         });
 
         // AOS.init({
