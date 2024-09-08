@@ -1523,9 +1523,9 @@
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: [0.25] // 調整為單個閾值
+                // threshold: [0.25]  調整為單個閾值
                 // threshold: [0.2, 0.5, 0.75, 0.2]
-                // threshold: [0.173, 0.5, 0.7] 
+                threshold: [0.175]
             };
 
             const observerCallback = (entries, observer) => {
@@ -1550,7 +1550,7 @@
                     const targetId = this.getAttribute('href').substring(1);
                     const targetSection = document.getElementById(targetId);
                     window.scrollTo({
-                        top: targetSection.offsetTop - 100, // 調整偏移量為 100 像素
+                        top: targetSection.offsetTop - 75, // 調整偏移量為 100 像素
                         behavior: 'smooth'
                     });
                     navbarCollapse.classList.remove('show');

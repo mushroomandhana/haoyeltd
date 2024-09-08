@@ -1543,9 +1543,11 @@ button:active {
 }
 
 .btn-close {
+    background: transparent url(../images/btn_close.svg) center / 1em auto no-repeat;
+    border-radius: 0;
     opacity: 1;
 }
 
 .btn-close:hover.btn-close {
-    opacity: 0.5;
+    background: transparent url(../images/btn_close_active.svg) center / 1em auto no-repeat;
 }
