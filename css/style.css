@@ -1311,7 +1311,7 @@ p {
 }
 
 .section5_inner {
-    padding: 80px;
+    padding: 80px 24px;
 }
 
 
@@ -1407,21 +1407,19 @@ p {
 
 @media (max-width: 1299px) {
     .contact_card:nth-child(2) {
-        margin: 0 30px;
-        padding: 0 30px;
+        margin: 0 40px;
+        padding: 0 40px;
     }
 
 }
 
-
+/* 
 @media (max-width: 1139px) {
-
     .contact_card:nth-child(2) {
-        margin: 0 20px;
-        padding: 0 20px;
+        margin: 0 40px;
+        padding: 0 40px;
     }
-
-}
+} */
 
 @media (max-width: 1099px) {
     .contact_card p {
