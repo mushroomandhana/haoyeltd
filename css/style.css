@@ -56,7 +56,7 @@ body {
 }
 
 .download_menu:hover {
-    background: linear-gradient(135deg, #18AEC3, #18AEC3, #18AEC3);
+    background: linear-gradient(135deg, #169eaf, #169eaf, #169eaf);
 }
 
 .download_menu.scrolled-to-bottom {
@@ -65,7 +65,7 @@ body {
 }
 
 .download_menu.scrolled-to-bottom:hover {
-    background: #18AEC3;
+    background: #169eaf;
 }
 
 #myBtn {
@@ -791,6 +791,13 @@ p {
     transition: all 0.3s;
     right: 0;
 }
+
+
+div#navbar-toggler:hover .navbar-toggler-icon::before,
+div#navbar-toggler:hover .navbar-toggler-icon::after {
+    background-color: #006785;
+}
+
 
 .navbar-toggler-icon::before {
     top: -5px;
