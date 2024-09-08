@@ -305,6 +305,7 @@ body {
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+    padding: 1rem 1rem;
 }
 
 .nav-item:nth-child(4) .nav-link {
@@ -318,7 +319,7 @@ body {
 
 
 .navbar.scrolled .navbar-nav {
-    top: -20px;
+    top: -18px;
 }
 
 
@@ -730,7 +731,7 @@ p {
     cursor: pointer;
     outline: none;
     z-index: 1001;
-    top: -4px;
+    top: -16px;
     right: 0;
     display: none;
     /* 移除點擊時的外框線 */
@@ -750,13 +751,8 @@ p {
 
 
 @media (max-width: 575px) {
-    .navbar-toggler {
-        /* right: 1.5rem; */
-        /* top: 1rem; */
-    }
-
     .navbar.scrolled .navbar-toggler {
-        top: -24px;
+        top: -26px;
     }
 }
 
@@ -840,7 +836,7 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
         display: none;
         z-index: 999;
         /* 確保選單在頁面最上層 */
-        padding-top: 60px;
+        /* padding-top: 60px; */
         /* 確保選單內容不被導航欄遮擋 */
     }
 
@@ -856,13 +852,21 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
     }
 
     .nav-item:nth-child(4) .nav-link {
-        padding-right: 1.5rem;
+        padding-right: 1rem;
     }
 
     /* .navbar-nav .nav-link.active {
         font-weight: bold;
     } */
 
+}
+
+
+@media (max-width: 575px) {
+    .navbar-collapse {
+        font-size: 1.125rem;
+
+    }
 }
 
 .section2 {
@@ -1421,6 +1425,7 @@ a {
     text-decoration: underline;
     /* font-weight: 600; */
 }
+
 
 p {
     display: block;
