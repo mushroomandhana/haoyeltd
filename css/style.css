@@ -60,8 +60,12 @@ body {
 }
 
 .download_menu.scrolled-to-bottom {
-    background: rgb(0, 103, 133, 0.92);
-    /* 深色藍綠色 */
+    background: linear-gradient(135deg, hsla(194, 100%, 31%, 0.922), #006785eb, #004d64eb);
+    /* 使用多層次漸變背景 */
+    background-size: 200% 200%;
+    /* 設置背景大小 */
+    transition: background-color 0.3s ease;
+    /* 添加過渡效果 */
 }
 
 .download_menu.scrolled-to-bottom:hover {
@@ -100,7 +104,7 @@ body {
 } */
 
 
-#myBtn:hover  circle {
+#myBtn:hover circle {
     /* fill: white; */
     /* 將填充顏色設為白色 */
     fill: #006785;
@@ -174,20 +178,19 @@ body {
     transition: background-color 0.3s, padding 0.3s;
     z-index: 1000;
     /* 確保選單在頁面最上層 */
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
-.container-fluid.navbar-inner{
+.container-fluid.navbar-inner {}
 
-}
-
-.navbar>.container-fluid.navbar-inner{
+.navbar>.container-fluid.navbar-inner {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
 }
-.container-fluid.navbar-inner{
+
+.container-fluid.navbar-inner {
     width: 100%;
     padding-right: var(--bs-gutter-x, 0rem);
     padding-left: var(--bs-gutter-x, 0rem);
@@ -254,12 +257,12 @@ body {
 .navbar.scrolled .logo {
     width: 96px;
     height: auto;
-    top: -3px;
+    top: -2px;
 }
 
 @media (max-width: 991px) {
     .logo {
-        
+
         /* left: 24px; */
     }
 }
@@ -334,7 +337,7 @@ body {
 .navbar-light .navbar-nav .nav-link.active:hover {
     /* color: #3589A1; */
     color: #000;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 
@@ -354,7 +357,7 @@ a.nav-link {
 }
 
 .navbar-nav .nav-link.active {
-    font-weight: 400;
+    font-weight: 500;
     color: #000;
 }
 
@@ -843,6 +846,8 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
 
     .navbar-collapse.show {
         display: block;
+        display: flex;
+        justify-content: center;
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -903,7 +908,7 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
     font-size: 3rem;
     color: #000;
     font-weight: 600;
-    line-height: 2rem;
+    line-height: 1;
     font-family: "Noto Serif TC", serif;
 }
 
@@ -912,7 +917,8 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
     font-size: 2rem;
     color: #000;
     font-weight: 300;
-    margin-top: 1rem;
+    line-height: 1;
+    margin-top: 0.5rem;
 }
 
 
@@ -942,6 +948,7 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
         max-width: 100%;
         /* margin-top: 40px; */
     }
+
     .swiper:nth-child(6) {
         margin-bottom: 80px;
     }
@@ -990,8 +997,8 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
     position: absolute;
     bottom: 0;
     z-index: 99;
-    opacity: .75;
-    padding: 16px 30px;
+    opacity: .7;
+    padding: 12px 24px;
 }
 
 
@@ -1015,6 +1022,12 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
 }
 
 @media (max-width: 576px) {
+
+    .border {
+        padding: 8px 16px;
+    }
+
+
     .swiper {
         margin-bottom: 24px;
     }
@@ -1044,7 +1057,7 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
 
 
 
-.swiper-button-prev:after{
+.swiper-button-prev:after {
     content: url(../images/btn_prev.svg);
 }
 
@@ -1062,41 +1075,57 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
 
 .swiper-button-next:after {
     position: relative;
-    right: 16px;
+    right: 22px;
 }
 
 .swiper-button-prev:after {
     position: relative;
-    left: 16px;
+    left: 22px;
+}
+
+
+@media (max-width: 1399px) {
+
+    .swiper-button-next:after {
+        position: relative;
+        right: 16px;
+    }
+
+    .swiper-button-prev:after {
+        position: relative;
+        left: 16px;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .swiper-button-next:after {
+        right: 12px;
+    }
+
+    .swiper-button-prev:after {
+        left: 12px;
+    }
+
 }
 
 
 
 
-.swiper-button-next:after{
+.swiper-button-next:after {
     content: url(../images/btn_next.svg);
 }
 
 .swiper-button-next:hover:after {
     content: url(../images/btn_next_active.svg);
-    }
-    
-    .swiper-button-prev:hover:after {
-    content: url(../images/btn_prev_active.svg);
-    }
-    
-
-
-@media (max-width: 576px) {
-    .swiper-button-next:after {
-        right: 8px;
-    }
-    
-    .swiper-button-prev:after {
-        left: 8px;
-    }
-    
 }
+
+.swiper-button-prev:hover:after {
+    content: url(../images/btn_prev_active.svg);
+}
+
+
 
 
 
@@ -1169,8 +1198,7 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
         margin-bottom: 40px;
     }
 
-    .d-flex.flex-wrap.d-flex.flex-column.flex-lg-row
-    .justify-content-center.project_card:nth-child(2){
+    .d-flex.flex-wrap.d-flex.flex-column.flex-lg-row .justify-content-center.project_card:nth-child(2) {
         margin-bottom: 0px;
     }
 }
@@ -1195,6 +1223,7 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
 
 .modal-header {
     box-sizing: border-box;
+    align-items: start;
     background-color: #fff;
     max-width: 798px;
     width: 100%;
@@ -1204,6 +1233,11 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
     font-weight: 400;
 }
 
+
+.modal-header .btn-close {
+    padding: 1rem .5rem;
+    margin: -.5rem -.5rem -.5rem auto;
+}
 
 @media (max-width: 991px) {
     .modal-dialog {
@@ -1367,7 +1401,7 @@ a {
     padding: 0 70px;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -1378,12 +1412,12 @@ a {
 }
 
 .contact_card:nth-child(3).contact_card p {
-    letter-spacing: 0.16rem;
+    letter-spacing: 0.2rem;
 }
 
 
 .contact_card .a_link:hover,
-.contact_card .a_link:hover p{
+.contact_card .a_link:hover p {
     text-decoration: underline;
     /* font-weight: 600; */
 }
@@ -1486,6 +1520,37 @@ p {
     margin-top: 20px;
 }
 
+@media (max-width: 384px) {
+    div#myModal1.modal table {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 456px) {
+    div#myModal2.modal table {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 330px) {
+    div#myModal3.modal table {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 402px) {
+    div#myModal4.modal table {
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-width: 348px) {
+    div#myModal5.modal table {
+        margin-top: 40px;
+    }
+}
+
 .modal th,
 .modal td {
     border-bottom: 1px solid #ddd;
@@ -1512,6 +1577,22 @@ p {
 tbody tr td:nth-child(2) {
     padding-left: 40px;
 }
+
+
+h4.modal-title {
+    line-height: 1.75;
+}
+
+@media (max-width: 575px) {
+
+    h4.modal-title,
+    .modal th,
+    .modal td {
+        font-size: 18px;
+    }
+}
+
+
 
 @media (max-width: 515px) {
     .modal-header {
