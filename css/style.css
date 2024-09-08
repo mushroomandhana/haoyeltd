@@ -921,12 +921,10 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
     font-size: 2rem;
     color: #000;
     font-weight: 300;
-    line-height: 1;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
+    position: relative;
+    top: 4px;
 }
-
-
-
 
 
 .swiper-content {
@@ -1021,7 +1019,9 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
 
     .section2 h4 {
         font-size: 1.5rem;
-        margin-top: 0.5rem;
+        margin-top: 0;
+        top: 6px;
+        /* margin-top: 0.5rem; */
     }
 }
 
