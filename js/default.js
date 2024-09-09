@@ -74,18 +74,32 @@ function fadeInOut() {
     const image1 = document.getElementById('image1');
     let visible = false;
 
-    setInterval(() => {
+    function toggleVisibility() {
         if (visible) {
+            image1.style.transition = 'opacity 2s';
             image1.style.opacity = 0;
         } else {
+            image1.style.transition = 'opacity 2s';
             image1.style.opacity = 1;
         }
         visible = !visible;
-    }, 4150); // 5 seconds interval
+    }
+
+    function startAnimation() {
+        toggleVisibility();
+        setTimeout(() => {
+            setTimeout(() => {
+                toggleVisibility();
+                setTimeout(startAnimation, 4000); // Pause for 4 seconds before repeating
+            }, 400); // 2 seconds for fade out
+        }, 7600); // Pause for 4 seconds after fade in
+    }
+
+    startAnimation();
 }
 
 window.onload = function () {
-    setTimeout(fadeInOut, 760); // Start after 3 seconds
+    setTimeout(fadeInOut, 3000); // Start after 2 seconds
 };
 
 
