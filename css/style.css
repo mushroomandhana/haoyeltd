@@ -862,9 +862,9 @@ div#navbar-toggler:hover .navbar-toggler-icon::after {
 }
 
 
-@media (max-width: 575px) {
+@media (max-width: 991px) {
     .navbar-collapse {
-        font-size: 1.125rem;
+        font-size: 1.5rem;
 
     }
 }
