@@ -623,6 +623,12 @@ p {
     overflow: hidden;
 }
 
+@media (max-width: 1280px) {
+    .slideshow-container {
+        height: 100vh;
+    }
+}
+
 @media (max-width: 1199px) {
     .slideshow-container {
         display: flex;
