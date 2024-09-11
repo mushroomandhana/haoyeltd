@@ -623,15 +623,15 @@ p {
     position: relative;
     width: 50%;
     /* max-width: 55.133333vh; */
-    height: 100vh;
+    height: 81.5vh;
     overflow: hidden;
 }
 
-/* @media (max-width: 1470px) {
+@media (max-width: 1470px) {
     .slideshow-container {
         height: 100vh;
     }
-} */
+}
 
 @media (max-width: 1199px) {
     .slideshow-container {
