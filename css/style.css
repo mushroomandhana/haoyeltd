@@ -380,6 +380,12 @@ a.nav-link {
     margin: 80px 0;
 }
 
+@media (max-width: 1280px) {
+.section1 .about_text.col-lg-6.col-md-12.align-self-left {
+    margin: 0;
+    }
+}
+
 .description {
     opacity: 0;
     transition: opacity 3.5s ease-in-out;
