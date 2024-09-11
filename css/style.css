@@ -376,16 +376,9 @@ a.nav-link {
     align-items: end;
 }
 
-.section1 .about_text.col-lg-6.col-md-12.align-self-left {
+.section1 .about_text{
     margin-top: 80px;
     margin-bottom: 80px;
-}
-
-@media (max-width: 991px) {
-.section1 .about_text.col-lg-6.col-md-12.align-self-left {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    }
 }
 
 .description {
@@ -433,6 +426,7 @@ a.nav-link {
 
     .section1 .about_text {
         margin-top: 132px;
+        margin-bottom: 0px;
     }
 }
 
