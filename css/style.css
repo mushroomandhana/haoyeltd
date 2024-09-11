@@ -376,6 +376,10 @@ a.nav-link {
     align-items: end;
 }
 
+.section1 .about_text.col-lg-6.col-md-12.align-self-left {
+    margin: 80px 0;
+}
+
 .description {
     opacity: 0;
     transition: opacity 3.5s ease-in-out;
@@ -619,18 +623,19 @@ p {
     position: relative;
     width: 50%;
     /* max-width: 55.133333vh; */
-    height: 81.5vh;
+    height: 100vh;
     overflow: hidden;
 }
 
-@media (max-width: 1470px) {
+/* @media (max-width: 1470px) {
     .slideshow-container {
         height: 100vh;
     }
-}
+} */
 
 @media (max-width: 1199px) {
     .slideshow-container {
+        height: 81.5vh;
         display: flex;
         align-items: center;
     }
